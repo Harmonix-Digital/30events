@@ -5,11 +5,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 const points = [
-  "FAST DELIVERY",
-  "PREMIUM QUALITY",
-  "BEST PRICES",
-  "24/7 SUPPORT",
-  "MONEY BACK GUARANTEE",
+  "Disco Forever",
+  "Old School Hip Hop",
+  "Classic RnB",
+  "Throwbacks Only",
+  "Grown & Sexy",
 ];
 
 export default function PointsCarousel() {
