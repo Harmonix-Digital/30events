@@ -107,7 +107,7 @@ export default function JoinListSection() {
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="email@you.com"
-              className="h-[68px] flex-1 rounded-full bg-[#2A1723] px-8 text-[20px] text-[#FAF3F7] outline-none placeholder:text-bodyPink focus:ring-2 focus:ring-pink md:text-[24px]"
+              className="min-h-[68px] h-[68px] flex-1 rounded-full bg-[#2A1723] px-8 text-[20px] text-[#FAF3F7] outline-none placeholder:text-bodyPink focus:ring-2 focus:ring-pink md:text-[24px]"
             />
 
             <button
