@@ -89,7 +89,7 @@ export default function Header() {
       >
         <div className="mb-10 flex items-center justify-between">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="Your 90s Events"
             width={70}
             height={40}
