@@ -38,7 +38,6 @@ export default function Footer() {
                 <Image src="/images/instagram.svg" width={22} height={22} alt="Instagram" />
               </a>
 
-
               <a
                 href="#"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bodyPink transition hover:border-pink hover:text-pink"
