@@ -16,7 +16,7 @@ export default function Footer() {
             data-aos-delay="0"
           >
             <p className="mb-6 text-[18px] font-bold text-[#FAF3F7]">
-              YOUR <span className="text-pink">30+</span> EVENTS
+              <Image src="/images/logo.svg" alt="Logo" width={87} height={80} />
             </p>
 
             <p className="max-w-[320px] text-[16px] leading-[1.6] text-bodyPink">
