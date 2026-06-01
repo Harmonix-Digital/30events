@@ -33,7 +33,7 @@ export default function Header() {
           <nav className="mx-auto flex items-center justify-between">
             <Link href="/" className="flex h-auto w-[87px] items-center">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo-new1.svg"
                 alt="Your 90s Events"
                 width={87}
                 height={80}
