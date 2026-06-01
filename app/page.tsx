@@ -5,6 +5,7 @@ import TicketsSection from '@/components/home/TicketsSection'
 import FAQSection from '@/components/home/FAQSection'
 import JoinListSection from '@/components/home/JoinListSection'
 import ContactSection from '@/components/home/ContactSection'
+import EventbriteCheckout from '@/components/home/EventWidget'
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
         <JoinSection />
         
         <VibeSection />
+        <EventbriteCheckout />
         {/* <TicketsSection /> */}
         <FAQSection />
         <JoinListSection />
