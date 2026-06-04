@@ -6,7 +6,7 @@ import { X, Plus } from "lucide-react";
 const faqs = [
   {
     question: "What age group is this for?",
-    answer: "Our crowd is 30+. Strict ID at the door – bring it.",
+    answer: "This event is for the 30+ crowd who still know to have fun but don't want to stay out all night. If you have friends who are 25+ they are welcome.",
   },
   {
     question: "What kind of music will be played?",

@@ -203,7 +203,7 @@ export default function ContactSection() {
             <InfoCard
               icon={<Image src="/images/instagram.svg" width={22} height={22} alt="Instagram" />}
               label="INSTAGRAM"
-              value="@your30plurs.events"
+              value="@your30plus.events"
             />
           </div>
         </div>

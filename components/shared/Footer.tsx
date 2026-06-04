@@ -16,7 +16,7 @@ export default function Footer() {
             data-aos-delay="0"
           >
             <p className="mb-6 text-[18px] font-bold text-[#FAF3F7]">
-              <Image src="/images/logo-new1.svg" alt="Logo" width={87} height={80} />
+              <Image src="/images/logo-new.svg" alt="Logo" width={87} height={80} />
             </p>
 
             <p className="max-w-[320px] text-[16px] leading-[1.6] text-bodyPink">
