@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroCarousel from "./HeroCarousel";
+import HeroGetTicket from "./HeroGetTicket";
+import HeroUpcomingEvent from "./HeroUpcomingEvent";
 
 const points = [
   "Disco Forever",
@@ -38,7 +40,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 z-10">
           <Image
             className="h-full w-full object-cover"
-            src="/images/hero-bg.webp"
+            src="/images/herobg.webp"
             alt="hero background"
             width={1440}
             height={1024}
@@ -71,20 +73,22 @@ const HeroSection = () => {
             </p>
 
             <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="0" className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
+              {/* <a
                 href="https://www.eventbrite.ca/e/80s-90s-hit-parade-day-time-club-party-tickets-1989107357652?aff=oddtdtcreator"
                 target="_blank"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-buttonPink px-8 py-4 text-sm font-semibold uppercase tracking-[1.4px] text-[#0A0408] transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] sm:w-auto"
               >
                 Get Tickets <ArrowRight className="h-4 w-4" />
-              </a>
+              </a> */}
+              <HeroGetTicket/>
+              <HeroUpcomingEvent />
 
-              <Link
+              {/* <Link
                 href="#"
                 className="inline-flex w-full items-center justify-center rounded-full bg-[#090407]/40 px-8 py-4 text-sm font-semibold uppercase tracking-[1.4px] text-[#FAF3F7] transition-all duration-300 hover:bg-[#090407]/70 sm:w-auto"
               >
                 Upcoming Events
-              </Link>
+              </Link> */}
 
 
             </div>

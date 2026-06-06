@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import GHLChatWidget from "@/components/shared/GHLChatWidget";
+import EventbriteProvider from "@/components/shared/EventbriteProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,11 +35,13 @@ export default function RootLayout({
       className={`${inter.variable} ${bebas.variable} font-sans`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        {children}
-        <GHLChatWidget />
-        <Footer />
-        <AOSInit />
+        <EventbriteProvider>
+          <Header />
+          {children}
+          <GHLChatWidget />
+          <Footer />
+          <AOSInit />
+        </EventbriteProvider>
       </body>
     </html>
   );

@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import FooterForm from "./FooterForm";
-// import { Instagram, Facebook } from "lucide-react";
+import { useEventbriteModal } from "./EventbriteProvider";
 
 export default function Footer() {
+  const { openEventbrite } = useEventbriteModal();
+
   return (
     <footer className="bg-[#130A10] pt-16 md:pt-20 lg:pt-24">
       <div className="container">
@@ -16,7 +20,7 @@ export default function Footer() {
             data-aos-delay="0"
           >
             <p className="mb-6 text-[18px] font-bold text-[#FAF3F7]">
-              <Image src="/images/logo-new.svg" alt="Logo" width={87} height={80} />
+              <Image src="/images/logo-new2.svg" alt="Logo" width={87} height={80} />
             </p>
 
             <p className="max-w-[320px] text-[16px] leading-[1.6] text-bodyPink">
@@ -31,17 +35,18 @@ export default function Footer() {
               data-aos-delay="120"
               className="mt-6 flex items-center gap-3"
             >
-              <a href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bodyPink transition hover:border-pink hover:text-pink"
+              <a
+                href="https://www.instagram.com/yourthirtyplusevents?igsh=ZHVpZGJvazZva2ls"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bodyPink transition hover:border-pink hover:text-pink" target="_blank"
               >
                 <Image src="/images/instagram.svg" width={22} height={22} alt="Instagram" />
               </a>
 
               <a
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bodyPink transition hover:border-pink hover:text-pink"
+                href="https://www.facebook.com/people/Your-30-Events/61572054383336/"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-bodyPink transition hover:border-pink hover:text-pink" target="_blank"
               >
-                 <Image src="/images/facebook.svg" width={22} height={22} alt="facebook" />
+                <Image src="/images/facebook.svg" width={22} height={22} alt="facebook" />
               </a>
             </div>
           </div>
@@ -60,11 +65,27 @@ export default function Footer() {
 
             <ul className="space-y-3">
               {["About", "Tickets", "Faq", "Join", "Contact"].map((item, index) => {
-                const isExternal = item === "Tickets";
+                const isTickets = item === "Tickets";
 
-                const href = isExternal
-                  ? "https://www.eventbrite.ca/e/1989107357652?aff=oddtdtcreator"
-                  : `/#${item.toLowerCase()}`;
+                if (isTickets) {
+                  return (
+                    <li
+                      key={item}
+                      data-aos="fade-up"
+                      data-aos-offset="0"
+                      data-aos-duration="600"
+                      data-aos-delay={220 + index * 80}
+                    >
+                      <button
+                        type="button"
+                        onClick={openEventbrite}
+                        className="cursor-pointer text-[16px] text-bodyPink transition hover:text-[#FAF3F7]"
+                      >
+                        {item}
+                      </button>
+                    </li>
+                  );
+                }
 
                 return (
                   <li
@@ -74,23 +95,12 @@ export default function Footer() {
                     data-aos-duration="600"
                     data-aos-delay={220 + index * 80}
                   >
-                    {isExternal ? (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[16px] text-bodyPink transition hover:text-[#FAF3F7]"
-                      >
-                        {item}
-                      </a>
-                    ) : (
-                      <a
-                        href={href}
-                        className="text-[16px] text-bodyPink transition hover:text-[#FAF3F7]"
-                      >
-                        {item}
-                      </a>
-                    )}
+                    <Link
+                      href={`/#${item.toLowerCase()}`}
+                      className="text-[16px] text-bodyPink transition hover:text-[#FAF3F7]"
+                    >
+                      {item}
+                    </Link>
                   </li>
                 );
               })}
@@ -113,8 +123,6 @@ export default function Footer() {
             </p>
 
             <FooterForm />
-
-
           </div>
         </div>
 

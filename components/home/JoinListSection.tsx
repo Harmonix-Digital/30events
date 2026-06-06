@@ -137,17 +137,17 @@ export default function JoinListSection() {
             className="mt-12 flex items-center justify-center gap-4"
           >
             <a
-              href="#"
+              href="https://www.instagram.com/yourthirtyplusevents?igsh=ZHVpZGJvazZva2ls"
               aria-label="Instagram"
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 text-bodyPink transition-all duration-300 hover:-translate-y-1 hover:border-pink hover:text-pink hover:shadow-[0_0_20px_rgba(225,129,176,0.35)]"
+              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 text-bodyPink transition-all duration-300 hover:-translate-y-1 hover:border-pink hover:text-pink hover:shadow-[0_0_20px_rgba(225,129,176,0.35)]" target="_blank"
             >
               <Image src="/images/instagram.svg" width={22} height={22} alt="Instagram" />
             </a>
 
             <a
-              href="#"
+              href="https://www.facebook.com/people/Your-30-Events/61572054383336/"
               aria-label="Facebook"
-              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 text-bodyPink transition-all duration-300 hover:-translate-y-1 hover:border-pink hover:text-pink hover:shadow-[0_0_20px_rgba(225,129,176,0.35)]"
+              className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 text-bodyPink transition-all duration-300 hover:-translate-y-1 hover:border-pink hover:text-pink hover:shadow-[0_0_20px_rgba(225,129,176,0.35)]" target="_blank"
             >
               <Image src="/images/facebook.svg" width={22} height={22} alt="facebook" />
             </a>

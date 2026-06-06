@@ -15,7 +15,7 @@ const LandingPage = () => {
         <JoinSection />
         
         <VibeSection />
-        <EventbriteCheckout />
+        {/* <EventbriteCheckout /> */}
         {/* <TicketsSection /> */}
         <FAQSection />
         <JoinListSection />

@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEventbriteModal } from "@/components/shared/EventbriteProvider";
 
-const navItems = ["ABOUT","FAQ", "JOIN", "CONTACT"];
+const navItems = ["ABOUT", "FAQ", "JOIN", "CONTACT"];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { openEventbrite } = useEventbriteModal();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 30);
 
     handleScroll();
 
@@ -31,9 +31,9 @@ export default function Header() {
       >
         <div className="container">
           <nav className="mx-auto flex items-center justify-between">
-            <Link href="/" className="flex h-auto w-[87px] items-center">
+            <Link href="/" className="flex h-auto w-[87px] items-center p-3">
               <Image
-                src="/images/logo.svg"
+                src="/images/logo-new2.svg"
                 alt="Your 90s Events"
                 width={87}
                 height={80}
@@ -54,15 +54,16 @@ export default function Header() {
               ))}
             </div>
 
-            <a
-              href="https://www.eventbrite.ca/e/1989107357652?aff=oddtdtcreator"
-              target="_blank"
-              className="hidden rounded-full bg-[#FF82C7] px-6 py-2.5 text-[14px] font-semibold tracking-wide text-black transition-all duration-300 hover:bg-[#e7cada] hover:shadow-[0_0_20px_rgba(255,130,199,0.6)] md:inline-flex"
+            <button
+              type="button"
+              onClick={openEventbrite}
+              className="hidden rounded-full bg-[#FF82C7] px-6 py-2.5 text-[14px] font-semibold tracking-wide text-black transition-all duration-300 hover:bg-[#e7cada] hover:shadow-[0_0_20px_rgba(255,130,199,0.6)] md:inline-flex cursor-pointer"
             >
               GET TICKETS
-            </a>
+            </button>
 
             <button
+              type="button"
               onClick={() => setOpen(true)}
               className="text-white md:hidden"
               aria-label="Open menu"
@@ -73,7 +74,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Overlay */}
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 z-[998] bg-black/80 transition-opacity md:hidden ${
@@ -81,7 +81,6 @@ export default function Header() {
         }`}
       />
 
-      {/* Mobile slide menu */}
       <aside
         className={`fixed left-0 top-0 z-[999] h-full w-[280px] bg-[#070307] px-6 py-5 shadow-2xl transition-transform duration-300 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
@@ -97,6 +96,7 @@ export default function Header() {
           />
 
           <button
+            type="button"
             onClick={() => setOpen(false)}
             className="text-white"
             aria-label="Close menu"
@@ -117,14 +117,16 @@ export default function Header() {
             </Link>
           ))}
 
-          <a
-            href="https://www.eventbrite.ca/e/1989107357652?aff=oddtdtcreator"
-            target="_blank"
-            onClick={() => setOpen(false)}
-            className="mt-4 w-fit rounded-full bg-[#ff6bc8] px-6 py-3 text-xs font-extrabold tracking-wide text-black"
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(false);
+              openEventbrite();
+            }}
+            className="mt-4 w-fit rounded-full bg-[#ff6bc8] px-6 py-3 text-xs font-extrabold tracking-wide text-black cursor-pointer "
           >
             GET TICKETS
-          </a>
+          </button>
         </div>
       </aside>
     </>
