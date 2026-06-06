@@ -32,12 +32,19 @@ export default function EventbritePortal({ open, setOpen }: EventbritePortalProp
     setMounted(true);
   }, []);
 
+  // Re-initialize widget whenever modal opens
   const initWidget = () => {
     if (!open) return;
-    if (initialized.current) return;
     if (!window.EBWidgets) return;
 
-    initialized.current = true;
+    const container = document.getElementById(
+      "eventbrite-widget-container-1989107357652"
+    );
+
+    if (container) {
+      // Clear previous iframe if exists
+      container.innerHTML = "";
+    }
 
     window.EBWidgets.createWidget({
       widgetType: "checkout",
@@ -48,21 +55,27 @@ export default function EventbritePortal({ open, setOpen }: EventbritePortalProp
     });
   };
 
+  // Run on modal open
   useEffect(() => {
-    initWidget();
+    if (open) {
+      initWidget();
+    }
   }, [open]);
 
   if (!mounted || !open) return null;
 
   return createPortal(
     <>
+      {/* Overlay */}
       <div
         onClick={() => setOpen(false)}
-        className="fixed inset-0 z-[9998] bg-black/70 backdrop-blur-sm"
+        className="fixed inset-0 z-9998 bg-black/70 backdrop-blur-sm"
       />
 
-      <div className="fixed inset-0 z-[9999] flex items-start justify-center overflow-y-auto px-4 pt-24">
+      {/* Modal */}
+      <div className="fixed inset-0 z-9999 flex items-start justify-center overflow-y-auto px-4 pt-24">
         <div className="relative w-full max-w-2xl rounded-2xl bg-white p-4 shadow-2xl">
+          {/* Close button */}
           <button
             type="button"
             onClick={() => setOpen(false)}
@@ -72,11 +85,13 @@ export default function EventbritePortal({ open, setOpen }: EventbritePortalProp
             <X size={22} />
           </button>
 
+          {/* Eventbrite Widget */}
           <div
             id="eventbrite-widget-container-1989107357652"
             className="min-h-[425px]"
           />
 
+          {/* Eventbrite Script */}
           <Script
             src="https://www.eventbrite.ca/static/widgets/eb_widgets.js"
             strategy="afterInteractive"
