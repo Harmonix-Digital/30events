@@ -48,7 +48,7 @@ export default function EventbritePortal({ open, setOpen }: EventbritePortalProp
 
     window.EBWidgets.createWidget({
       widgetType: "checkout",
-      eventId: "1989107357652",
+      eventId: "2003473249421",
       iframeContainerId: "eventbrite-widget-container-1989107357652",
       iframeContainerHeight: 425,
       onOrderComplete: () => console.log("Order complete!"),
