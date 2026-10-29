@@ -40,7 +40,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 z-10">
           <Image
             className="h-full w-full object-cover"
-            src="/images/hero-2.jpeg"
+            src="/images/hero-3.webp"
             alt="hero background"
             width={1440}
             height={1024}
