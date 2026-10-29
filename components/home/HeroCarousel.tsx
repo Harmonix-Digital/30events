@@ -4,13 +4,16 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
+
+
 const points = [
-  "Disco Forever",
+  "Best of the 90s",
   "Old School Hip Hop",
-  "Classic RnB",
+  "Early 2000s Hits",
   "Throwbacks Only",
   "Grown & Sexy",
 ];
+
 
 export default function PointsCarousel() {
   const [emblaRef] = useEmblaCarousel(
@@ -28,7 +31,7 @@ export default function PointsCarousel() {
   );
 
   return (
-    <section className="mx-auto max-w-[2000px] bg-black">
+    <section className="mx-auto max-w-500 bg-black">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {points.map((point, index) => (
@@ -48,7 +51,7 @@ export default function PointsCarousel() {
                   </h3>
                 </div>
 
-                <div className="flex items-center justify-center flex-none w-[29px]">
+                <div className="flex items-center justify-center flex-none w-7.25">
                   <Image
                     src="/images/pinkstar.svg"
                     alt="Star"

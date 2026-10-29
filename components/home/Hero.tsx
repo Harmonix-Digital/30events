@@ -6,13 +6,6 @@ import HeroCarousel from "./HeroCarousel";
 import HeroGetTicket from "./HeroGetTicket";
 import HeroUpcomingEvent from "./HeroUpcomingEvent";
 
-const points = [
-  "Best of the 90s",
-  "Old School Hip Hop",
-  "Early 2000s Hits",
-  "Throwbacks Only",
-  "Grown & Sexy",
-];
 
 const meta = [
   { value: "12K+", label: "Members" },
@@ -25,7 +18,7 @@ const meta = [
 const HeroSection = () => {
   return (
     <>
-      <section id="about" className="relative mt-[80px] overflow-hidden pt-[96px] pb-[72px] md:pt-[120px] md:pb-[90px] lg:pt-[128px] lg:pb-[100px] scroll-mt-24">
+      <section id="about" className="relative mt-20 overflow-hidden pt-24 pb-18 md:pt-30 md:pb-22.5 lg:pt-32 lg:pb-25 scroll-mt-24">
         <div className="absolute inset-0 z-20">
           <Image
             className="h-full w-full object-cover"
@@ -96,10 +89,10 @@ const HeroSection = () => {
             <div className="mt-14 grid grid-cols-2 gap-6 sm:flex sm:gap-10 lg:mt-24">
               {meta.map((item,index) => (
                 <div data-aos="fade-left" data-aos-offset="0" data-aos-duration="800" data-aos-delay={index*100} key={item.label}>
-                  <h3 className="text-2xl leading-[32px] tracking-[-0.48px] text-[#FAF3F7]">
+                  <h3 className="text-2xl leading-8 tracking-[-0.48px] text-[#FAF3F7]">
                     {item.value}
                   </h3>
-                  <p className="text-[10px] uppercase leading-[1.5] tracking-[1px] text-bodyPink">
+                  <p className="text-[10px] uppercase leading-normal tracking-[1px] text-bodyPink">
                     {item.label}
                   </p>
                 </div>
