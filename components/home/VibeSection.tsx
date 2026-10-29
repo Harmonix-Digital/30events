@@ -166,7 +166,7 @@ export default function VibeSection() {
           </div>
 
           {/* Bottom wide */}
-          <div
+          {/* <div
             {...imageAos}
             data-aos="fade-up"
             data-aos-delay="100"
@@ -192,7 +192,11 @@ export default function VibeSection() {
               fill
               className="rounded-2xl object-cover"
             />
-          </div>
+          </div> */}
+
+
+
+
         </div>
       </div>
     </section>

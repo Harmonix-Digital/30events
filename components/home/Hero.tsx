@@ -7,9 +7,9 @@ import HeroGetTicket from "./HeroGetTicket";
 import HeroUpcomingEvent from "./HeroUpcomingEvent";
 
 const points = [
-  "Disco Forever",
+  "Best of the 90s",
   "Old School Hip Hop",
-  "Classic RnB",
+  "Early 2000s Hits",
   "Throwbacks Only",
   "Grown & Sexy",
 ];
@@ -61,9 +61,9 @@ const HeroSection = () => {
             </p>
 
             <h1  className="my-7 flex flex-col font-heading text-[58px] uppercase leading-[0.85] tracking-[-1px] text-[#FAF3F7] sm:text-[78px] md:text-[104px] md:tracking-[-2px] lg:my-8 lg:text-[136px] lg:tracking-[-2.7px]">
-              <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="0">The night</span>
-              <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="`100" className="text-pink">still belongs</span>
-              <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="200">to you.</span>
+              <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="0">Party Like</span>
+              
+              <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="200">It’s <span data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="`100" className="text-pink">1999.</span></span>
             </h1>
 
             <p data-aos="fade-up" data-aos-offset="0" data-aos-duration="800" data-aos-delay="300" className="max-w-xl text-[16px] leading-[1.6] text-bodyPink md:text-[18px]">
